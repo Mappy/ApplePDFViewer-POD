@@ -20,7 +20,7 @@ The PDF page is rendered into a CATiledLayer so that it uses memory efficiently.
                            LICENSE
                 }
   s.author           = "Apple Inc."
-  s.source           = { :git => git@git.niji.fr:mappy-city/applepdfviewer-pod.git", :tag => s.version.to_s }
+  s.source           = { :git => "git@git.niji.fr:mappy-city/applepdfviewer-pod.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '6.0'
   s.requires_arc = true
