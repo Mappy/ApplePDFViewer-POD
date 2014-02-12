@@ -1,0 +1,7 @@
+pod "ApplePDFViewer", :path => "../ApplePDFViewer.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
