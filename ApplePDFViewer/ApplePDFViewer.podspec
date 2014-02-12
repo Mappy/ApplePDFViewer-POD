@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ApplePDFViewer"
-  s.version          = "2.0.0"
+  s.version          = "2.0.1"
   s.summary          = "A PDF viewer"
   s.description      = <<-DESC
                        PDF viewer that supports zooming in or out at any level of zooming.
