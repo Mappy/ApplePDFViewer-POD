@@ -1,9 +1,3 @@
-#
-# Be sure to run `pod spec lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
   s.name             = "ApplePDFViewer"
   s.version          = "2.0.0"
@@ -26,7 +20,6 @@ The PDF page is rendered into a CATiledLayer so that it uses memory efficiently.
   s.requires_arc = true
 
   s.source_files = 'Classes'
-  s.resources = 'Assets'
 
   s.public_header_files = 'Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics', 'QuartzCore'
