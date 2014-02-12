@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ApplePDFViewer"
-  s.version          = "2.0.2"
+  s.version          = "2.0.3"
   s.summary          = "A PDF viewer"
   s.description      = <<-DESC
                        PDF viewer that supports zooming in or out at any level of zooming.
@@ -19,8 +19,8 @@ The PDF page is rendered into a CATiledLayer so that it uses memory efficiently.
   s.platform     = :ios, '6.0'
   s.requires_arc = true
 
-  s.source_files = 'ApplePDFViewer/Classes'
+  s.source_files = 'Classes'
 
-  s.public_header_files = 'ApplePDFViewer/Classes/**/*.h'
+  s.public_header_files = 'Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics', 'QuartzCore'
 end
