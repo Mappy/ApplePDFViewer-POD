@@ -180,6 +180,7 @@
     else
         frameToCenter.origin.y = 0;
     
+    self.oldTiledPDFView.frame = frameToCenter;
     self.tiledPDFView.frame = frameToCenter;
     self.backgroundImageView.frame = frameToCenter;
     
@@ -213,6 +214,7 @@
     [self.oldTiledPDFView removeFromSuperview];
     
     // Set the current TiledPDFView to be the old view.
+    self.backgroundImageView.hidden = YES;
     self.oldTiledPDFView = self.tiledPDFView;
     [self addSubview:self.oldTiledPDFView];
 }
@@ -230,7 +232,6 @@
     // Calculate the new frame for the new TiledPDFView.
     CGRect pageRect = CGPDFPageGetBoxRect(_PDFPage, kCGPDFMediaBox);
     pageRect.size = CGSizeMake(pageRect.size.width*_PDFScale, pageRect.size.height*_PDFScale);
-    
     // Create a new TiledPDFView based on new frame and scaling.
     TiledPDFView *tiledPDFView = [[TiledPDFView alloc] initWithFrame:pageRect scale:_PDFScale];
     [tiledPDFView setPage:_PDFPage];
@@ -238,7 +239,9 @@
     // Add the new TiledPDFView to the PDFScrollView.
     [self addSubview:tiledPDFView];
     self.tiledPDFView = tiledPDFView;
-}
+    
+    self.backgroundImageView.hidden = NO;
 
+}
 
 @end
