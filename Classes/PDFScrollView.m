@@ -229,6 +229,11 @@
     // Set the new scale factor for the TiledPDFView.
     _PDFScale *= scale;
     
+    if (_PDFScale < self.minimumZoomScale)
+    {
+        _PDFScale = self.minimumZoomScale;
+    }
+    
     // Calculate the new frame for the new TiledPDFView.
     CGRect pageRect = CGPDFPageGetBoxRect(_PDFPage, kCGPDFMediaBox);
     pageRect.size = CGSizeMake(pageRect.size.width*_PDFScale, pageRect.size.height*_PDFScale);
