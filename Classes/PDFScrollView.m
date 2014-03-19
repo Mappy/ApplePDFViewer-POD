@@ -227,8 +227,9 @@
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale
 {
     // Set the new scale factor for the TiledPDFView.
-    _PDFScale *= scale;
-    
+    //_PDFScale *= scale; // Becasue of iPhone 5S issue
+	_PDFScale *= scrollView.zoomScale;
+	
     if (_PDFScale < self.minimumZoomScale)
     {
         _PDFScale = self.minimumZoomScale;
